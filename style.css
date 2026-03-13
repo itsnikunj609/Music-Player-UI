@@ -154,7 +154,7 @@
      background-color: #dad5d5;
      padding: 12px;
      border-radius: 30px;
-     filter: invert();
+     filter: invert(1);
      min-height: 40px;
 
  }
@@ -420,6 +420,8 @@
 
  .circle {
      width: 13px;
+     background-color: black;
+     
      position: absolute;
      bottom: -5px;
      height: 13px;
@@ -465,7 +467,7 @@
      display: block;
  }
 
- @media (max-width:1200px) {
+ @media (max-width:1100px) {
      .leftcontainer {
 
          position: absolute;
@@ -515,5 +517,8 @@
      }
      body{
         height: 100vh;
+     }
+     .songinfo,.songtime{
+        width: auto;
      }
  }
