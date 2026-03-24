@@ -466,6 +466,10 @@
  .visibility {
      display: block;
  }
+ .volume{
+    display: flex;
+    justify-content: space-around;
+ }
 
  @media (max-width:1100px) {
      .leftcontainer {
