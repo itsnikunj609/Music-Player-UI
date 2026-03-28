@@ -213,7 +213,17 @@ async function main() {
         console.log("setting volume to", e.target.value, "/100")
         currentsong.volume = parseInt(e.target.value) / 100
     })
-    //load whenever the card is clicked
+     // add an event listener to mute the track
+    document.querySelector(".volume>img").addEventListener("click",e=>{
+        if(e.target.src.includes("volume.svg")){
+            e.target.src=e.target.src.replace("volume.svg.","mute.svg")
+            currentsong.volume=0;
+        }
+        else{
+            currentsong.volume=0.1;
+              e.target.src=e.target.src.replace("mute.svg","volume.svg")
+        }
+    })
   
 
 }
