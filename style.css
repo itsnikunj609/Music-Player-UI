@@ -567,27 +567,60 @@
      }
  }
 
- @media(max-width:600px) {
+  @media(max-width:600px) {
+
      .rightcontainer {
-         width: 100%;
-         min-height: 100%;
-         position: static;
+         width: 100vw;
+         max-height: 100vh;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         padding: 0px;
+
      }
 
-       .playbar {
-        width: 100%;
-    }
-    .header .right{
-        width:50vw;
-        display: flex;
-        
-    }
+     .homebtn,
+     .search-icon,
+     .btn2,
+     .line,
+     .image,
+     .install,
+     .box1 {
+         display: none;
 
-    .seekbar {
-        width: 90%;
-    }
-    .logo,.homebtn,.search-icon{
-        display: none;
-    }
-}
- 
+     }
+
+     body {
+         margin: 0;
+         padding: 0;
+     }
+
+     .playbar {
+
+         position: fixed;
+         bottom: 143px;
+         width: 395px;
+         overflow-x: scroll;
+
+         display: flex;
+         flex-direction: column;
+         padding: 0;
+     }
+
+     .cardcontainer {
+         max-height: 210px;
+         overflow: scroll;
+     }
+     .abovebar{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+     }
+     .header{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+     }
+     
+
+ }
